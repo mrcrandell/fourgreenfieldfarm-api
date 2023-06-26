@@ -1,0 +1,7 @@
+node_modules
+**/.terraform/
+.env
+.DS_Store
+/.develop/workspace.spec.json
+/docker-compose.yml
+/.develop/mysql/1-setup.sql
