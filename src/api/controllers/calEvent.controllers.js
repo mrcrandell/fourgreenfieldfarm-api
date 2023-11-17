@@ -7,8 +7,8 @@ module.exports.get = async (req, res) => {
 };
 
 module.exports.post = async (req, res) => {
-  const { name, slug, startsAt, endsAt } = req.body;
-  res.send(await calEvent.create({ name, slug, startsAt, endsAt }));
+  const { name, slug, startsAt, endsAt, description, isFeatured, isHasEndsAt, isAllDay, hauntedBy } = req.body;
+  res.send(await calEvent.create({ name, slug, startsAt, endsAt, description, isFeatured, isHasEndsAt, isAllDay, hauntedBy }));
 };
 
 module.exports.put = async (req, res) => {

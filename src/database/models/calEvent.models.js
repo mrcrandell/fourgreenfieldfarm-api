@@ -1,6 +1,7 @@
 const { DataTypes, Model, Sequelize } = require('sequelize');
 const timestampConfig = require('../configs/timestamp.configs');
 const { sequelize } = require('..');
+const format = require('date-fns/format');
 
 class calEvent extends Model {}
 
@@ -19,9 +20,15 @@ const dto = {
   },
   startsAt: {
     type: DataTypes.DATE,
+    /* get() {
+      return format(this.getDataValue('startsAt'),('yyyy-MM-dd\'T\'h:mm:ss\'.007Z\''));
+    } */
   },
   endsAt: {
     type: DataTypes.DATE,
+    /* get() {
+      return format(this.getDataValue('endsAt'),('yyyy-MM-dd\'T\'h:mm:ss\'.007Z\''));
+    } */
   },
   description: {
     type: DataTypes.TEXT,

@@ -18,6 +18,10 @@ module.exports = (() => {
       dialect: 'mysql',
       dialectOptions: {
         bigNumberStrings: true,
+        options: {
+          useUTC: false, // for reading from database
+        },
+        
       },
       replication: {
         read: [

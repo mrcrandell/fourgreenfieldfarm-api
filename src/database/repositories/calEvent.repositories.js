@@ -5,6 +5,7 @@ const { models, thens } = require('..');
 const { calEvent } = models;
 const { One, All, Update, Destroy } = thens;
 
+// TODO add repeat logic
 const create = async ({ name, slug, startsAt, endsAt, description, isFeatured, isHasEndsAt, isAllDay, hauntedBy }) => calEvent.create({ name, slug, startsAt, endsAt, description, isFeatured, isHasEndsAt, isAllDay, hauntedBy }).then(One);
 
 const all = async ({ limit, offset, startsAt, endsAt }) => {
